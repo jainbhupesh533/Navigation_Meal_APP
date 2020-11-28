@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/catergory.dart';
+import '../models/catergory.dart';
 
 // ignore: non_constant_identifier_names
 final DATA = [

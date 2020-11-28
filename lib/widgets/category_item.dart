@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './models/catergory.dart';
+import 'package:meal_app/widgets/category_meals_screen.dart';
+import '../models/catergory.dart';
 // import 'models/catergory.dart';
 // import 'dummy_data.dart';
 
@@ -30,7 +31,7 @@ class CategoryItem extends StatelessWidget {
 
     //* New routing method
     Navigator.of(ctx).pushNamed(
-      '/category-meals',
+      CategoryMealsScreen.routeNamed,
       arguments: {
         'id': ctg.id,
         'title': ctg.title,
