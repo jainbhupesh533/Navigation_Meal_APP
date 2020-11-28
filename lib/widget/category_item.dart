@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './models/catergory.dart';
+import './category_meals_screen.dart';
+import '../models/catergory.dart';
 // import 'models/catergory.dart';
 // import 'dummy_data.dart';
 
@@ -7,7 +8,6 @@ class CategoryItem extends StatelessWidget {
   // final String id;
   // final String title;
   // final Color color;
-  final Function deleteCat;
   final Category ctg;
 
   CategoryItem({
@@ -15,7 +15,6 @@ class CategoryItem extends StatelessWidget {
     // @required this.id,
     // @required this.title,
     // @required this.color,
-    @required this.deleteCat,
     @required this.ctg,
   }) : super(key: key);
 
@@ -30,7 +29,7 @@ class CategoryItem extends StatelessWidget {
 
     //* New routing method
     Navigator.of(ctx).pushNamed(
-      '/category-meals',
+      CategoryMealsScreen.routeName,
       arguments: {
         'id': ctg.id,
         'title': ctg.title,
@@ -52,16 +51,6 @@ class CategoryItem extends StatelessWidget {
               ctg.title,
               style: Theme.of(context).textTheme.headline6,
             ),
-            if (ctg.id.contains(new RegExp(r'[1-9][1-9]')) == true)
-              Positioned(
-                bottom: 0,
-                right: -10,
-                child: IconButton(
-                  icon: Icon(Icons.delete),
-                  hoverColor: Theme.of(context).errorColor,
-                  onPressed: () => deleteCat(ctg.id),
-                ),
-              ),
           ],
         ),
         decoration: BoxDecoration(
