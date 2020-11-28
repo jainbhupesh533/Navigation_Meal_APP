@@ -28,11 +28,10 @@ class _CategoriesScreenState extends State<CategoriesScreen>
     super.dispose();
   }
 
-  
-
   void _addNewCategory(String txTitle, Color enteredColor) {
     int _sum = DATA.length;
-    var calcLength = _sum+1;
+    var calcLength = _sum + 1;
+    print(_sum);
     print(calcLength);
     final newCategoryList = Category(
       id: 'C$calcLength',
