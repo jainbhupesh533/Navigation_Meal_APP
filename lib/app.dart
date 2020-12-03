@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import './widget/category_meals_screen.dart';
-import './widget/categories_screen.dart';
+import './src/routes/meal_detail.dart';
+import './src/routes/category_meals_screen.dart';
+import './src/routes/categories_screen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -32,7 +33,16 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => CategoriesScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
+      // ? generation of random route
+      // onGenerateRoute: (settings) {
+      //   return MaterialPageRoute(builder:(ctx)=> CategoriesScreen(),);
+      // },
+      // * when route forget his path 
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (ctx) => CategoriesScreen(),
+      ),
     );
   }
 }

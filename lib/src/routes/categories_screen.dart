@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './category_item.dart';
+import '../widget/category_item.dart';
 import '../data/dummy_data.dart';
 
 class CategoriesScreen extends StatefulWidget {
@@ -44,7 +44,6 @@ class _CategoriesScreenState extends State<CategoriesScreen>
         //       ),
         //     )
         //     .toList(),
-
         // * with builder method
         itemCount: DATA_CATEGORY.length,
         itemBuilder: (context, index) {

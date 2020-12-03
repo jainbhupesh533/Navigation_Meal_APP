@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './category_meals_screen.dart';
+import '../routes/category_meals_screen.dart';
 import '../models/catergory.dart';
 // import 'models/catergory.dart';
 // import 'dummy_data.dart';

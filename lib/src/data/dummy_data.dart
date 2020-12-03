@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/catergory.dart';
+import '../models/meal.dart';
 
 // ignore: non_constant_identifier_names
 const DATA_CATEGORY = const [
@@ -55,9 +56,8 @@ const DATA_CATEGORY = const [
   ),
 ];
 
-/*
 // ignore: non_constant_identifier_names
-final DUMMY_MEALS = [
+const DUMMY_MEALS = const [
   Meal(
     id: 'm1',
     categories: [
@@ -407,4 +407,3 @@ final DUMMY_MEALS = [
     isLactoseFree: true,
   ),
 ];
-*/
